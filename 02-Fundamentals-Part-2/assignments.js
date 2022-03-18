@@ -48,3 +48,33 @@
 //   )}% of the world`;
 // }
 // console.log(describePopulation("Egypt", 102));
+
+//LECTURE: INTRODUCTION TO ARRAYS
+// const populations = [102, 83, 67, 28];
+// console.log(populations.length === 4);
+
+// const percentages = [
+//   percentageOfWorld1(populations[0]),
+//   percentageOfWorld1(populations[1]),
+//   percentageOfWorld1(populations[2]),
+//   percentageOfWorld1(populations[3]),
+// ];
+// console.log(percentages);
+
+//LECTURE: BASIC ARRAY OPERATIONS (METHODS)
+
+// const neighbours = ["KSA", "Sudan", "Libya"];
+
+// neighbours.push("Utopia");
+// console.log(neighbours);
+
+// neighbours.pop();
+// console.log(neighbours);
+
+// if (!neighbours.includes("Germany")) {
+//   console.log("Probably not a central European country :D");
+// }
+// console.log(neighbours);
+
+// neighbours[neighbours.indexOf("KSA")] = "Saudi Arabia";
+// console.log(neighbours);
