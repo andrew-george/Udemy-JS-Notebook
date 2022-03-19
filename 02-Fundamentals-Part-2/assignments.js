@@ -78,3 +78,33 @@
 
 // neighbours[neighbours.indexOf("KSA")] = "Saudi Arabia";
 // console.log(neighbours);
+
+//LECTURE: INTRODUCTION TO OBJECTS
+// const myCountry = {
+//   country: "Egypt",
+//   capital: "Cairo",
+//   language: "Arabic",
+//   population: 102.3,
+//   neighbours: ["Libya", "Sudan", "KSA"],
+//   describe: function () {
+//     return `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
+//   },
+//   checkIsland: function () {
+//     this.neighbours.length === 0
+//       ? (this.isIsland = "true")
+//       : (this.isIsland = "false");
+//   },
+// };
+// //LECTURE: DOT VS. BRACKET NOTATION
+// console.log(
+//   `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`
+// );
+// myCountry.population += 2;
+// console.log(myCountry.population);
+// myCountry["population"] -= 2;
+// console.log(myCountry.population);
+
+//LECTURE: OBJECTS METHODS
+// console.log(myCountry.describe());
+// myCountry.checkIsland();
+// console.log(myCountry);

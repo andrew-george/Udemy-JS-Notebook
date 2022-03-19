@@ -197,3 +197,111 @@
 
 // const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 // console.log(total);
+
+//LECTURE: INTRODUCTION TO OBJECTS
+
+// const andrewArray = ["Andrew", "Berty", 2037 - 1997, "Frontend Dev"];
+
+// const andrew = {
+//   firstName: "Andrew",
+//   lastName: "Berty",
+//   age: 2037 - 1997,
+//   job: "Frontend Dev",
+//   friends: ["Michael", "Peter", "Steven"],
+// };
+// console.log(andrew);
+
+//LECTURE: DOT VS. BRACKET NOTATION
+//dot notation
+// console.log(andrew.lastName);
+
+//bracket notation
+//(needs to contain a string)
+//takes an expression (computed property name)
+// console.log(andrew["lastName"]);
+
+// const nameKey = "Name";
+// console.log(andrew["last" + nameKey]);
+
+// const interestedIn = prompt(
+//   "What do you want to know about Andrew? Choose between firstName, lastName, age,job and friends"
+// );
+
+// if (andrew[interestedIn]) {
+//   console.log(andrew[interestedIn]);
+// } else {
+//   console.log("wrong request!");
+// }
+
+// andrew.location = "Egypt";
+// andrew["github"] = "andrew-george";
+// console.log(andrew);
+
+//CHALLENGE
+// console.log(
+//   `${andrew.firstName} has ${andrew.friends.length} friends ,and his best friend is called ${andrew.friends[0]}`
+// );
+
+//LECTURE: OBJECTS METHODS
+
+// const andrew = {
+//   firstName: "Andrew",
+//   lastName: "Berty",
+//   birthYear: 1997,
+//   job: "Frontend Dev",
+//   friends: ["Michael", "Peter", "Steven"],
+//   hasDriversLicense: true,
+//   calcAge: function () {
+//     this.age = 2037 - this.birthYear;
+//     return this.age;
+//   },
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge()}-years old ${
+//       this.job
+//     } and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+//   },
+// };
+
+// console.log(andrew.calcAge());
+
+// console.log(andrew.age);
+// console.log(andrew.age);
+// console.log(andrew.age);
+// // console.log(andrew["calcAge"](andrew.birthYear));
+
+// //CHALLENGE
+// console.log(andrew.getSummary());
+
+//CODING CHALLENGE #3
+
+// const mark = {
+//   fullName: "Mark Miller",
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     this.BMI = this.mass / this.height ** 2;
+//     return this.BMI;
+//   },
+// };
+
+// const john = {
+//   fullName: "John Smith",
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function () {
+//     this.BMI = this.mass / this.height ** 2;
+//     return this.BMI;
+//   },
+// };
+// mark.calcBMI();
+// john.calcBMI();
+
+// if (mark.BMI > john.BMI) {
+//   console.log(
+//     `${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s (${john.BMI})`
+//   );
+// } else if (john.BMI > mark.BMI) {
+//   console.log(
+//     `${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s's (${mark.BMI})`
+//   );
+// }
