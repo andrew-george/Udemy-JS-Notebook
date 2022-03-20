@@ -1,20 +1,20 @@
-"use strict";
+// 'use strict';
 
 // let hasDriversLicense = false;
 // const passTest = true;
 
 // if (passTest) hasDriversLicense = true;
 // if (hasDriversLicense) {
-//   console.log("I can drive!");
+//   console.log('I can drive!');
 // }
 
-// const interface = "Audio";
+// const interface = 'Audio';
 // const private = 534;
-// const if = 23;
+// // const if = 23;
 
-//LECTURE: FUNCTION
+// // LECTURE: FUNCTION
 // function logger() {
-//   console.log("My name is Andrew");
+//   console.log('My name is Andrew');
 // }
 // //calling/ running / invoking the function
 // logger();
@@ -33,26 +33,26 @@
 // const appleOrangeJuice = fruitProcessor(2, 4);
 // console.log(appleOrangeJuice);
 
-//LECTURE: FUNCITON DECLARATION & EXPRESSION
-//FUNCTION DECLARATION
+// // LECTURE: FUNCITON DECLARATION & EXPRESSION
+// // FUNCTION DECLARATION
 // function calcAge(birthYear) {
 //   return 2037 - birthYear;
 // }
 
-// const age1 = calcAge(1997);
+// // const age1 = calcAge(1997);
 
 // //FUNCTION EXPRESSION
 // //ANONYMOUS FUNCTION
 // const calcAge2 = function (birthYear) {
 //   return 2037 - birthYear;
 // };
-// const age2 = calcAge2(1997);
+// // const age2 = calcAge2(1997);
 
 // console.log(age1, age2);
 
-//LECTURE: ARROW FUNCTION
+// // LECTURE: ARROW FUNCTION
 // const calcAge3 = (birthYear) => 2037 - birthYear;
-// const age3 = calcAge3(1997);
+// // const age3 = calcAge3(1997);
 // console.log(age3);
 
 // const yearsUntilRetirement = (birthYear, firstName) => {
@@ -60,9 +60,9 @@
 //   const retirement = 65 - age;
 //   return `${firstName} retires in ${retirement} years`;
 // };
-// console.log(yearsUntilRetirement(1997, "Andrew"));
+// console.log(yearsUntilRetirement(1997, 'Andrew'));
 
-//LECTURE: FUNCTIONS CALLING ANOTHER FUNCTIONS
+// // LECTURE: FUNCTIONS CALLING ANOTHER FUNCTIONS
 // function cutFruitPieces(fruit) {
 //   return fruit * 4;
 // }
@@ -76,7 +76,7 @@
 // }
 // console.log(fruitProcessor(2, 3));
 
-//CODING CHALLENGE #1
+// // CODING CHALLENGE #1
 // const calcAverage = (num1, num2, num3) => (num1 + num2 + num3) / 3;
 
 // //test data #1
@@ -90,7 +90,7 @@
 //   } else if (avgKoalas >= avgDolphins * 2) {
 //     console.log(`Koalas wins (${avgKoalas} vs. ${avgDolphins})`);
 //   } else {
-//     console.log("No one wins!");
+//     console.log('No one wins!');
 //   }
 // }
 // checkWinner(avgDolphins, avgKoalas);
@@ -102,12 +102,12 @@
 
 // checkWinner(avgDolphins, avgKoalas);
 
-//LECTURE: Introduction to Arrays
-// const friend1 = "Michael";
-// const friend2 = "Steven";
-// const friend3 = "Peter";
+// // LECTURE: Introduction to Arrays
+// const friend1 = 'Michael';
+// const friend2 = 'Steven';
+// const friend3 = 'Peter';
 
-// const friends = ["Michael", "Steven", "Peter"];
+// const friends = ['Michael', 'Steven', 'Peter'];
 // console.log(friends);
 
 // console.log(friends[0]);
@@ -115,14 +115,14 @@
 // console.log(friends.length);
 // console.log(friends[friends.length - 1]);
 
-// friends[2] = "Jay";
+// friends[2] = 'Jay';
 // console.log(friends);
 
 // const Andrew = [
-//   "Andrew",
-//   "Berty",
+//   'Andrew',
+//   'Berty',
 //   2022 - 1997,
-//   "Junior Frontend Developer",
+//   'Junior Frontend Developer',
 //   friends,
 // ];
 // console.log(Andrew);
@@ -132,29 +132,29 @@
 // const calcAge = function (birthYear) {
 //   return 2037 - birthYear;
 // };
-// const years = [1990, 1967, 2002, 2010, 2018];
+// // const years = [1990, 1967, 2002, 2010, 2018];
 
 // const age1 = calcAge(years[0]);
 // const age2 = calcAge(years[1]);
 // const age3 = calcAge(years[years.length - 1]);
 // console.log(age1, age2, age3);
-// const ages = [
-//   calcAge(years[0]),
-//   calcAge(years[1]),
-//   calcAge(years[years.length - 1]),
-// ];
+// // const ages = [
+// //   calcAge(years[0]),
+// //   calcAge(years[1]),
+// //   calcAge(years[years.length - 1]),
+// // ];
 // console.log(ages);
 
-//LECTURE: Basic Array Operations (Methods)
+// // LECTURE: Basic Array Operations (Methods)
 
-// const friends = ["Michael", "Steven", "Peter"];
+// const friends = ['Michael', 'Steven', 'Peter'];
 
 // //add at the end
-// friends.push("Jay");
+// friends.push('Jay');
 // console.log(friends);
 
 // //add at the start
-// friends.unshift("John");
+// friends.unshift('John');
 // console.log(friends);
 
 // //remove from end
@@ -167,21 +167,21 @@
 // console.log(friends);
 // console.log(firstEle);
 
-// console.log(friends.indexOf("Steven"));
-// console.log(friends.indexOf("Bob")); // returns-1
+// console.log(friends.indexOf('Steven'));
+// console.log(friends.indexOf('Bob')); // returns-1
 
 // //uses strict equality
-// console.log(friends.includes("Michael"));
-// console.log(friends.includes("Andrew"));
+// console.log(friends.includes('Michael'));
+// console.log(friends.includes('Andrew'));
 
 // friends.push(23);
-// console.log(friends.includes("23"));
+// console.log(friends.includes('23'));
 
-// if (friends.includes("Peter")) {
-//   console.log("You have a friend called Peter");
+// if (friends.includes('Peter')) {
+//   console.log('You have a friend called Peter');
 // }
 
-// CODING CHALLENGE #2
+// // CODING CHALLENGE #2
 // function calcTip(bill) {
 //   if (bill >= 50 && bill <= 300) {
 //     const tip = bill * 0.15;
@@ -198,58 +198,58 @@
 // const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 // console.log(total);
 
-//LECTURE: INTRODUCTION TO OBJECTS
+// // LECTURE: INTRODUCTION TO OBJECTS
 
-// const andrewArray = ["Andrew", "Berty", 2037 - 1997, "Frontend Dev"];
+// const andrewArray = ['Andrew', 'Berty', 2037 - 1997, 'Frontend Dev'];
 
 // const andrew = {
-//   firstName: "Andrew",
-//   lastName: "Berty",
+//   firstName: 'Andrew',
+//   lastName: 'Berty',
 //   age: 2037 - 1997,
-//   job: "Frontend Dev",
-//   friends: ["Michael", "Peter", "Steven"],
+//   job: 'Frontend Dev',
+//   friends: ['Michael', 'Peter', 'Steven'],
 // };
 // console.log(andrew);
 
-//LECTURE: DOT VS. BRACKET NOTATION
-//dot notation
+// // LECTURE: DOT VS. BRACKET NOTATION
+// // dot notation
 // console.log(andrew.lastName);
 
-//bracket notation
-//(needs to contain a string)
-//takes an expression (computed property name)
-// console.log(andrew["lastName"]);
+// // bracket notation
+// // (needs to contain a string)
+// // takes an expression (computed property name)
+// console.log(andrew['lastName']);
 
-// const nameKey = "Name";
-// console.log(andrew["last" + nameKey]);
+// const nameKey = 'Name';
+// console.log(andrew['last' + nameKey]);
 
 // const interestedIn = prompt(
-//   "What do you want to know about Andrew? Choose between firstName, lastName, age,job and friends"
+//   'What do you want to know about Andrew? Choose between firstName, lastName, age,job and friends'
 // );
 
 // if (andrew[interestedIn]) {
 //   console.log(andrew[interestedIn]);
 // } else {
-//   console.log("wrong request!");
+//   console.log('wrong request!');
 // }
 
-// andrew.location = "Egypt";
-// andrew["github"] = "andrew-george";
+// andrew.location = 'Egypt';
+// andrew['github'] = 'andrew-george';
 // console.log(andrew);
 
-//CHALLENGE
+// // CHALLENGE
 // console.log(
 //   `${andrew.firstName} has ${andrew.friends.length} friends ,and his best friend is called ${andrew.friends[0]}`
 // );
 
-//LECTURE: OBJECTS METHODS
+// // LECTURE: OBJECTS METHODS
 
 // const andrew = {
-//   firstName: "Andrew",
-//   lastName: "Berty",
+//   firstName: 'Andrew',
+//   lastName: 'Berty',
 //   birthYear: 1997,
-//   job: "Frontend Dev",
-//   friends: ["Michael", "Peter", "Steven"],
+//   job: 'Frontend Dev',
+//   friends: ['Michael', 'Peter', 'Steven'],
 //   hasDriversLicense: true,
 //   calcAge: function () {
 //     this.age = 2037 - this.birthYear;
@@ -258,7 +258,7 @@
 //   getSummary: function () {
 //     return `${this.firstName} is a ${this.calcAge()}-years old ${
 //       this.job
-//     } and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+//     } and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`;
 //   },
 // };
 
@@ -272,10 +272,10 @@
 // //CHALLENGE
 // console.log(andrew.getSummary());
 
-//CODING CHALLENGE #3
+// // CODING CHALLENGE #3
 
 // const mark = {
-//   fullName: "Mark Miller",
+//   fullName: 'Mark Miller',
 //   mass: 78,
 //   height: 1.69,
 //   calcBMI: function () {
@@ -285,7 +285,7 @@
 // };
 
 // const john = {
-//   fullName: "John Smith",
+//   fullName: 'John Smith',
 //   mass: 92,
 //   height: 1.95,
 //   calcBMI: function () {
@@ -305,3 +305,128 @@
 //     `${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s's (${mark.BMI})`
 //   );
 // }
+
+// // LECTURE: ITERATION(FOR LOOP)
+
+// console.log('Lifting weights repetition 1 🏋️‍♂️');
+// console.log('Lifting weights repetition 2 🏋️‍♂️');
+// console.log('Lifting weights repetition 3 🏋️‍♂️');
+// console.log('Lifting weights repetition 4 🏋️‍♂️');
+// console.log('Lifting weights repetition 5 🏋️‍♂️');
+// console.log('Lifting weights repetition 6 🏋️‍♂️');
+// console.log('Lifting weights repetition 7 🏋️‍♂️');
+// console.log('Lifting weights repetition 8 🏋️‍♂️');
+// console.log('Lifting weights repetition 9 🏋️‍♂️');
+// console.log('Lifting weights repetition 10 🏋️‍♂️');
+
+// for (let rep = 1; rep <= 20; rep++) {
+//   console.log(`Lifting weights repetition ${rep}🏋️‍♂️`);
+// }
+
+//LECTURE: LOOPING ARRAYS, BREAKING AND CONTINUING
+// const andrew = [
+//   'Andrew',
+//   'Berty',
+//   2022 - 1997,
+//   'Junior Frontend Developer',
+//   ['Michael', 'Peter', 'Steven'],
+//   true,
+// ];
+
+// const dataTypesArray = [];
+// for (let i = 0; i < andrew.length; i++) {
+//   dataTypesArray.push(typeof andrew[i]);
+// }
+// console.log(dataTypesArray);
+
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2037 - years[i]);
+// }
+// console.log(ages);
+
+// //continue and break
+
+// console.log('--------ONLY STRINGS------');
+// for (let i = 0; i < andrew.length; i++) {
+//   if (typeof andrew[i] !== 'string') continue;
+//   console.log(andrew[i], typeof andrew[i]);
+// }
+
+// console.log('--------BREAK WITH NUMBER------');
+// for (let i = 0; i < andrew.length; i++) {
+//   if (typeof andrew[i] === 'number') break;
+//   console.log(andrew[i], typeof andrew[i]);
+// }
+
+//LECTURE: LOOPING BACKWARDS AND NESTED LOOPS
+
+// const andrew = [
+//   'Andrew',
+//   'Berty',
+//   2022 - 1997,
+//   'Junior Frontend Developer',
+//   ['Michael', 'Peter', 'Steven'],
+// ];
+
+// for (i = andrew.length - 1; i >= 0; i--) {
+//   console.log(andrew[i]);
+// }
+
+// for (let excercise = 1; excercise < 4; excercise++) {
+//   console.log(`------Starting excercise ${excercise}----`);
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`Exercise ${excercise}: Lifting weight repetition ${rep}`);
+//   }
+// }
+
+//LECTURE: WHILE LOOP
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep}🏋️‍♂️`);
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`WHILE: Lifting weights repetition ${rep}🏋️‍♂️`);
+//   rep++;
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+
+// while (dice !== 6) {
+//   console.log(`You rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   if (dice === 6) console.log('Loop is about to end!');
+// }
+
+//CODING CHALLENGE #4
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const totals = [];
+
+// function calcTip(bill) {
+//   if (bill >= 50 && bill <= 300) {
+//     return bill * 0.15;
+//   } else {
+//     return bill * 0.2;
+//   }
+// }
+
+// for (i = 0; i < bills.length; i++) {
+//   const tip = calcTip(bills[i]);
+//   tips.push(tip);
+//   const total = bills[i] + tip;
+//   totals.push(total);
+// }
+// console.log(tips);
+// console.log(totals);
+
+// function calcAverage(arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum = sum + arr[i];
+//   }
+//   return sum / arr.length;
+// }
+// console.log(calcAverage(totals));
