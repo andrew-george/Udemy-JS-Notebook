@@ -519,3 +519,16 @@ console.log(h1.parentElement.children);
   if (el !== h1) el.style.transform = 'scale(0.5)';
 });
  */
+
+//=> LIFECYCLE DOM EVENTS
+/* 
+// wait for DOM to be loaded
+document.addEventListener('DOMContentLoaded', function (e) {
+  console.log('HTML parsed and DOM tree built', e);
+});
+
+// wait for whole content to load. including images and external resources
+window.addEventListener('load', function (e) {
+  console.log('Page fully loaded', e);
+});
+ */
