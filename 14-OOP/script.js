@@ -265,7 +265,7 @@ methods, and with the getter and setter.
 Test data:
 § Data car 1: 'Ford' going at 120 km/h
  */
-
+/* 
 class CarCl {
   // constructor function
   constructor(make, speed) {
@@ -310,7 +310,7 @@ ford.brake();
 ford.brake();
 
 console.log(ford.speedUS);
-
+ */
 //=> Inheritance Between Classes: Constructor functions
 
 const Person = function (firstName, birthYear) {
@@ -514,33 +514,63 @@ jay.calcAge();
 
 //=> Another Class example
 
+// Public fields
+// Private fields
+// Public methods
+// Private methods
+// (there is also the static version)
+
 class Account {
+  // Public field (instances)
+  locale = navigator.language;
+
+  // Private fields
+  #movements = [];
+
+  //- because we have to set the pin according to pin value that the constructor function receives so we declare it here and set it inside the constructor function
+  #pin;
+
   constructor(owner, currency, pin) {
     this.owner = owner;
     this.currency = currency;
-    this.pin = pin;
-    this.movements = [];
-    this.locale = navigator.language;
+    // protected property
+    // this._pin = pin;
+    this.#pin = pin;
+    // this.movements = [];
+    // this.locale = navigator.language;
     console.log(`Thanks for opening an account, ${owner}`);
   }
 
+  //Public Methods
   // Public Interface (API)
+
+  getMovements() {
+    return this.#movements;
+  }
+
   deposit(value) {
-    this.movements.push(value);
+    this.#movements.push(value);
+    return this;
   }
 
   withdraw(value) {
     this.deposit(-value);
+    return this;
   }
 
-  approveLoan(value) {
-    return true;
-  }
   requestLoan(value) {
-    if (this.approveLoan(value)) {
+    if (this.#approveLoan(value)) {
       this.deposit(value);
       console.log('Loan Approved!');
+      return this;
     }
+  }
+  static helper() {
+    console.log('Helper');
+  }
+  // Private Methods
+  #approveLoan(value) {
+    return true;
   }
 }
 
@@ -553,5 +583,100 @@ console.log(acc1);
 acc1.deposit(250);
 acc1.withdraw(140);
 acc1.requestLoan(1000);
+console.log(acc1.getMovements());
 
 console.log(acc1);
+
+// console.log(acc1.#movements);
+// console.log(acc1.#approveLoad(100));
+Account.helper();
+
+//=> Chaining Methods
+
+//- We have to return 'this' at the end of methods we want to be chainable
+
+acc1.deposit(300).deposit(500).withdraw(35).requestLoan(25000).withdraw(4000);
+console.log(acc1.getMovements());
+
+//=> Coding Challenge #4
+/* 
+1. Re-create Challenge #3, but this time using ES6 classes: create an 'EVCl'
+child class of the 'CarCl' class
+2. Make the 'charge' property private
+3. Implement the ability to chain the 'accelerate' and 'chargeBattery'
+methods of this class, and also update the 'brake' method in the 'CarCl'
+class. Then experiment with chaining!
+Test data:
+§ Data car 1: 'Rivian' going at 120 km/h, with a charge of 23% */
+
+class CarCl {
+  // constructor function
+  constructor(make, speed) {
+    this.make = make;
+    this.speed = speed;
+  }
+
+  // methods
+  accelerate() {
+    this.speed += 10;
+    console.log(this.speed);
+  }
+
+  brake() {
+    this.speed -= 5;
+    return this;
+  }
+
+  // getters
+  get speedUS() {
+    return `Car is going ${this.speed / 1.6} mi/h`;
+  }
+
+  // setters
+  set speedUS(speed) {
+    this.speed = speed * 1.6;
+  }
+}
+
+class EVCl extends CarCl {
+  #charge;
+  //constructor function
+  constructor(make, speed, charge) {
+    super(make, speed);
+    this.#charge = charge;
+  }
+
+  // methods
+
+  //accelerate
+  accelerate(speed) {
+    this.speed += 20;
+    this.#charge--;
+    console.log(
+      `${this.make} going at ${this.speed} km/h, with a charge of ${
+        this.#charge
+      }%`
+    );
+    return this;
+  }
+
+  // charge battery
+  chargeBattery(chargeTo) {
+    this.#charge = chargeTo;
+    return this;
+  }
+}
+
+const rivian = new EVCl('Rivian', 120, 23);
+
+console.log(rivian);
+
+rivian
+  .accelerate()
+  .accelerate()
+  .accelerate()
+  .brake()
+  .chargeBattery(90)
+  .accelerate();
+
+console.log(rivian.speedUS);
